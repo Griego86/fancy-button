@@ -1,10 +1,13 @@
 import { useState } from "react";
 
-export default function TextRepeaterButton () {
+export default function TextRepeaterButton (props) {
 
   const [repetitions, setRepetitions] = useState(1);
 
-  const handleClick = () => setRepetitions(repetitions + 1);
+  const handleClick = () => {
+    setRepetitions(repetitions + 1)
+    props.increaseAnger(0.1)
+  };
 
   const textArray = [];
 
