@@ -4,6 +4,8 @@ export default function TextRepeaterButton () {
 
   const [repetitions, setRepetitions] = useState(1);
 
+  const handleClick = () => setRepetitions(repetitions + 1);
+
   const textArray = [];
 
   for (let i = 0; i < repetitions; i++) {
@@ -11,7 +13,7 @@ export default function TextRepeaterButton () {
   }
 
   return (
-    <button className="TextRepeaterButton">
+    <button onClick={handleClick} className="TextRepeaterButton">
       {textArray}
     </button>
   );
